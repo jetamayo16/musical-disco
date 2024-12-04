@@ -5,7 +5,7 @@ Given('I am in the Order Managment APP', () => {
   I.amOnPage('/pisagrafico_osSegui2/zntjsp/SVT0197P.jsp?Equipo=DES&Biblioteca=CDJUAREZV1&BibliotecaDB2=CDJRDBV1');
 });
 
-When('I enter the costumer name {string}', (customerName) => {
+When('I enter the customer name {string}', (customerName) => {
   I.selectOption('#selectConsultar', '5');
   I.fillField('input[name="Telefono"]', customerName);
   I.pressKey('Enter');
@@ -20,6 +20,6 @@ When('I click on the Detail button', () => {
   I.click('#btnConsultar');
 });
 
-Then('I should see the order number and the costumer information', () => {
+Then('I should see the order number and the customer information', () => {
   I.saveScreenshot('Account Information.png');  
 });
